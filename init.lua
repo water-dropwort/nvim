@@ -1,7 +1,5 @@
-local opt = vim.opt
-
 -- 行番号表示
-opt.number = true
+vim.opt.number = true
 
 -- タブ文字やスペースを可視化する
 vim.opt.list = true
@@ -22,3 +20,5 @@ vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { noremap = true, silent = true })
 vim.keymap.set("x", "<A-k>", ":m <-2<CR>gv=gv", { noremap = true, silent = true })
 vim.keymap.set("x", "<A-j>", ":m >+1<CR>gv=gv", { noremap = true, silent = true })
 
+-- システムのクリップボードと連携
+vim.opt.clipboard:append({"unnamedplus"})
